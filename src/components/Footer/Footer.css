@@ -1,0 +1,160 @@
+.footer-section {
+  width: 100%;
+  padding: 75px 0 45px;
+  background: #000000;
+  color: #ffffff;
+}
+
+.footer-container {
+  padding: 0 80px;
+}
+
+.footer-brand h2 {
+  margin: 0 0 28px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.footer-brand p {
+  max-width: 340px;
+  margin: 0 0 32px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  gap: 32px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.footer-subscribe {
+  max-width: 470px;
+  margin: auto;
+}
+
+.footer-subscribe h3,
+.footer-links h3 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer-subscribe-form {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 18px;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.footer-subscribe-form input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #000000;
+  font-size: 13px;
+}
+
+.footer-subscribe-form input::placeholder {
+  color: #000000;
+}
+
+.footer-form-divider {
+  width: 1px;
+  height: 20px;
+  margin: 0 20px;
+  background: #000000;
+}
+
+.footer-subscribe-form button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #000000;
+    transition: 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.footer-subscribe-form button:hover {
+    transform: scale(1.02);
+}
+
+.footer-links {
+  max-width: 150px;
+  margin-left: auto;
+}
+
+.footer-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 65px;
+  text-align: center;
+}
+
+.footer-bottom-line {
+  width: 55px;
+  height: 1px;
+  display: block;
+
+  margin: 0 auto 28px;
+  background: #ffffff;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .footer-section {
+    padding: 60px 0 35px;
+  }
+
+  .footer-container {
+    padding: 0 24px;
+  }
+
+  .footer-subscribe {
+    max-width: none;
+    margin: 0;
+  }
+
+  .footer-links {
+    margin-left: 0;
+  }
+
+  .footer-bottom {
+    margin-top: 50px;
+  }
+}

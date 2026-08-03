@@ -1,0 +1,273 @@
+.trending-products-section {
+  width: 100%;
+  padding: 90px 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.trending-products-container {
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.trending-products-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.trending-small-title {
+  gap: 18px;
+  margin-bottom: 18px;
+
+  color: #000000;
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.trending-title-line {
+  display: block;
+  width: 42px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.trending-products-intro h2 {
+  margin: 0;
+  color: #000000;
+  font-size: clamp(36px, 3vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.trending-products-intro p {
+  margin: 18px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.trending-explore-button {
+  min-width: 160px;
+  min-height: 62px;
+  padding: 14px 28px;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+    transition: 0.2s;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0 12px 22px rgb(0 0 0 / 15%);
+}
+.trending-explore-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.trending-products-wrapper {
+  position: relative;
+  padding: 0 48px 55px;
+}
+
+.trending-product-column {
+  animation: show-product 0.3s ease;
+}
+
+@keyframes show-product {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.trending-product-card {
+  min-height: 315px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+    background-color: #DEDEDE;
+}
+
+.trending-product-image-wrapper {
+  height: 190px;
+  padding: 24px;
+}
+
+.trending-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.trending-product-content {
+  padding: 6px 28px 22px;
+}
+
+.trending-product-content h3 {
+  margin: 0 0 18px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.trending-product-content p {
+  color: #000000;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.trending-product-open-button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #000000;
+  font-size: 20px;
+}
+
+.trending-product-open-button svg {
+  color: #ffffff;
+}
+
+.trending-arrow {
+    position: absolute;
+    top: 43%;
+    z-index: 5;
+    width: 44px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: #888888;
+    transition: 0.2s;
+    font-size: 42px;
+    transform: translateY(-50%);
+}
+.trending-arrow:hover {
+    color: #000000;
+}
+.trending-arrow-left {
+  left: -8px;
+}
+
+.trending-arrow-right {
+  right: -8px;
+}
+
+.trending-arrow svg {
+  color: inherit;
+}
+
+.trending-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.trending-products-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  gap: 14px;
+  transform: translateX(-50%);
+}
+
+.trending-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.trending-dot-active {
+  width: 28px;
+  border-radius: 20px;
+}
+
+@media (max-width: 991px) {
+  .trending-products-section {
+    padding: 65px 0;
+  }
+
+  .trending-products-container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .trending-products-intro {
+    align-items: center;
+    text-align: center;
+  }
+
+  .trending-products-intro h2 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .trending-products-intro h2 br,
+  .trending-products-intro p br {
+    display: none;
+  }
+
+  .trending-products-wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 42px 55px;
+  }
+
+  .trending-products-wrapper .row {
+    margin: 0;
+  }
+
+  .trending-product-column {
+    display: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .trending-product-column:first-child {
+    display: block;
+  }
+
+  .trending-product-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 340px;
+    margin: 0;
+  }
+
+  .trending-product-image-wrapper {
+    height: 205px;
+    padding: 24px;
+  }
+
+  .trending-product-content {
+    padding: 10px 24px 24px;
+  }
+
+  .trending-arrow-left {
+    left: 0;
+  }
+
+  .trending-arrow-right {
+    right: 0;
+  }
+
+  .trending-products-dots {
+    bottom: 0;
+  }
+}
