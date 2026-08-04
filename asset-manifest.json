@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/StepUp-online-shop/static/css/main.86e8a5ff.css",
-    "main.js": "/StepUp-online-shop/static/js/main.01aa7a22.js",
+    "main.css": "/StepUp-online-shop/static/css/main.f5060140.css",
+    "main.js": "/StepUp-online-shop/static/js/main.381035ee.js",
     "static/media/hhh.png": "/StepUp-online-shop/static/media/hhh.00bd2bd233fe97091d00.png",
+    "static/media/right.png": "/StepUp-online-shop/static/media/right.3fc4013a916571abe14e.png",
+    "static/media/left.png": "/StepUp-online-shop/static/media/left.cf209e8e1ffe237ad1ca.png",
     "static/media/hero-shoes.png": "/StepUp-online-shop/static/media/hero-shoes.a0aa1f3583a439f1ff4c.png",
     "static/media/neymar.png": "/StepUp-online-shop/static/media/neymar.0b5c94e37beed9a45794.png",
+    "static/media/messi.png": "/StepUp-online-shop/static/media/messi.80faea2252770211775e.png",
     "static/media/pink-shoe.png": "/StepUp-online-shop/static/media/pink-shoe.4bd0930ba313c9c085dd.png",
     "static/media/hamilton.png": "/StepUp-online-shop/static/media/hamilton.332c12bd7b0c130ae30c.png",
+    "static/media/mike.png": "/StepUp-online-shop/static/media/mike.13af895a0b4312bbb35a.png",
     "static/media/Undertaker.png": "/StepUp-online-shop/static/media/Undertaker.f350811a7f98335cc2e8.png",
-    "static/media/shoes6.png": "/StepUp-online-shop/static/media/shoes6.a29c15183b3db9ff01ac.png",
-    "static/media/shoes7.png": "/StepUp-online-shop/static/media/shoes7.7309e235da4edf8be64b.png",
-    "static/media/shoes5.png": "/StepUp-online-shop/static/media/shoes5.87d2bdb056e3c6281a45.png",
-    "static/media/shoes4.png": "/StepUp-online-shop/static/media/shoes4.a870e2968bf89dc89ce3.png",
-    "static/media/shoes2.png": "/StepUp-online-shop/static/media/shoes2.1d587ada12ef6e7aaed9.png",
-    "static/media/shoes3.png": "/StepUp-online-shop/static/media/shoes3.4539eb6b68ae4749d90e.png",
     "static/media/med2.png": "/StepUp-online-shop/static/media/med2.c88e9ebd4171ea95f925.png",
     "static/media/med1.png": "/StepUp-online-shop/static/media/med1.e90999d1e8e96302bf10.png",
     "static/media/med3.png": "/StepUp-online-shop/static/media/med3.343e9d8ba2766d390520.png",
@@ -23,11 +21,11 @@
     "static/media/small1.png": "/StepUp-online-shop/static/media/small1.5080d83f4b895fdd5a50.png",
     "static/media/small3.png": "/StepUp-online-shop/static/media/small3.11ec8fe5e13a740cf3cb.png",
     "index.html": "/StepUp-online-shop/index.html",
-    "main.86e8a5ff.css.map": "/StepUp-online-shop/static/css/main.86e8a5ff.css.map",
-    "main.01aa7a22.js.map": "/StepUp-online-shop/static/js/main.01aa7a22.js.map"
+    "main.f5060140.css.map": "/StepUp-online-shop/static/css/main.f5060140.css.map",
+    "main.381035ee.js.map": "/StepUp-online-shop/static/js/main.381035ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.86e8a5ff.css",
-    "static/js/main.01aa7a22.js"
+    "static/css/main.f5060140.css",
+    "static/js/main.381035ee.js"
   ]
 }
