@@ -29,7 +29,7 @@ function Hero() {
           ULTIMATE
         </span>
 
-        <div className="hero-circles" aria-hidden="true">
+        <div className="hero-circles">
           <span className="hero-circle circle-top-left" />
           <span className="hero-circle circle-right" />
           <span className="hero-circle circle-bottom" />

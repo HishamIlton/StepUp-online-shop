@@ -41,6 +41,7 @@
   font-size: clamp(15px, 1.25vw, 19px);
   font-weight: 500;
   line-height: 1.55;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .shop-button {
@@ -99,15 +100,15 @@
 }
 
 .circle-top-left {
-  top: 40px;
+  top: 50px;
   left: 17%;
   width: 250px;
   height: 250px;
 }
 
 .circle-right {
-  top: 205px;
-  right: -65px;
+  top: 180px;
+  right: 20px;
   width: 250px;
   height: 250px;
 }
@@ -237,9 +238,9 @@
   }
 
   .product-image {
-    width: 115%;
-    max-width: 760px;
-    height: 410px;
+    width: 100%;
+    max-width: 740px;
+    height: 350px;
     object-position: center;
     transform: translate(-3%, -4%);
   }

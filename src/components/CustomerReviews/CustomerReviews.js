@@ -1,82 +1,71 @@
 import { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-
 import customerOne from "../../assets/images/neymar.png";
 import customerTwo from "../../assets/images/Undertaker.png";
 import customerThree from "../../assets/images/hhh.png";
 import customerFour from "../../assets/images/hamilton.png";
+import customerFive from "../../assets/images/messi.png";
+import customerSix from "../../assets/images/mike.png";
 
 import "./CustomerReviews.css";
 
 function CustomerReviews() {
   const [activePage, setActivePage] = useState(0);
 
-  const reviewImages = [
-    customerOne,
-    customerTwo,
-    customerThree,
-    customerFour,
-  ];
-
-  const reviewsData = [
+  const reviews = [
     {
       id: 1,
       name: "Neymar",
+      image: customerOne,
       feedback:
         "The shoes are very comfortable, stylish, and exactly as shown in the pictures.",
     },
     {
       id: 2,
       name: "The Undertaker",
+      image: customerTwo,
       feedback:
         "Great quality and fast delivery. The size was perfect and I really liked the design.",
     },
     {
       id: 3,
       name: "Triple H",
+      image: customerThree,
       feedback:
-        "I loved the material and the finishing. They feel comfortable even after wearing them all day.",
+        "I loved the material and finishing. They feel comfortable even after wearing them all day.",
     },
     {
       id: 4,
       name: "L. Hamilton",
+      image: customerFour,
       feedback:
         "A very good shopping experience. The product arrived on time and was carefully packaged.",
     },
     {
       id: 5,
-      name: "Neymar",
+      name: "Lionel Messi",
+      image: customerFive,
       feedback:
-        "The color and design are beautiful, and the shoes are lighter and more comfortable than expected.",
+        "The product looks premium, feels lightweight, and provides excellent comfort while walking.",
     },
     {
       id: 6,
-      name: "The Undertaker",
+      name: "Mike",
+      image: customerSix,
       feedback:
         "Excellent value for money. The quality is impressive and I would definitely order again.",
     },
-    {
-      id: 7,
-      name: "Triple H",
-      feedback:
-        "The shoes matched my outfit perfectly and remained comfortable throughout the entire day.",
-    },
-    {
-      id: 8,
-      name: "L. Hamilton",
-      feedback:
-        "The product looks premium and fits perfectly. Customer service was also very helpful.",
-    },
   ];
 
-  const reviews = reviewsData.map((review, index) => ({
-    ...review,
-    image: reviewImages[index % reviewImages.length],
-  }));
+  const reviewsPerPage = 2;
+
+  const totalPages = Math.ceil(
+    reviews.length / reviewsPerPage
+  );
 
   const visibleReviews = reviews.slice(
-    activePage * 2,
-    activePage * 2 + 2
+    activePage * reviewsPerPage,
+    activePage * reviewsPerPage + reviewsPerPage
   );
 
   return (
@@ -84,7 +73,9 @@ function CustomerReviews() {
       <div className="container-fluid reviews-container">
         <div className="reviews-heading d-flex align-items-center justify-content-center">
           <span />
+
           <h2>Customer Review</h2>
+
           <span />
         </div>
 
@@ -125,19 +116,21 @@ function CustomerReviews() {
           ))}
         </div>
 
-        <div className="reviews-dots d-flex justify-content-center">
-          {[0, 1, 2, 3].map((page) => (
-            <button
-              key={page}
-              type="button"
-              className={`review-dot ${
-                activePage === page
-                  ? "review-dot-active"
-                  : ""
-              }`}
-              onClick={() => setActivePage(page)}
-            />
-          ))}
+        <div className="reviews-dots">
+          {Array.from({ length: totalPages }).map(
+            (_, page) => (
+              <button
+                key={page}
+                type="button"
+                className={`review-dot ${
+                  activePage === page
+                    ? "review-dot-active"
+                    : ""
+                }`}
+                onClick={() => setActivePage(page)}
+              />
+            )
+          )}
         </div>
       </div>
     </section>

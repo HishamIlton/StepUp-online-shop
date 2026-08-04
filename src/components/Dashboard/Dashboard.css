@@ -1,0 +1,122 @@
+.dashboard-page {
+  min-height: calc(100vh - 110px);
+  padding: 50px 0 80px;
+  background: #ffffff;
+}
+
+.dashboard-container {
+  padding: 0 70px;
+}
+
+.dashboard-page h1 {
+  margin-bottom: 28px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashboard-form {
+  max-width: 620px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  padding: 20px;
+  border-radius: 12px;
+  background: #f3f3f3;
+}
+
+.dashboard-form input,
+.dashboard-form select {
+  width: 100%;
+  height: 46px;
+  padding: 0 12px;
+
+  border: 1px solid #999999;
+  background: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+.dashboard-form input:focus,
+.dashboard-form select:focus {
+  border-color: #000000;
+}
+
+.dashboard-form button {
+  grid-column: 1 / -1;
+  min-height: 46px;
+
+  border: 1px solid #000000;
+  background: #000000;
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.dashboard-form button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dashboard-form .cancel-button {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dashboard-form .cancel-button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.dashboard-table-wrapper {
+  width: 100%;
+  margin-top: 45px;
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #999999;
+  text-align: left;
+}
+
+.dashboard-table th {
+  font-weight: 700;
+}
+
+.edit-button,
+.delete-button {
+  margin-right: 12px;
+  font-weight: 600;
+}
+
+.edit-button {
+  color: #1685c5;
+}
+
+.delete-button {
+  color: #dc3545;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .dashboard-page {
+    min-height: calc(100vh - 85px);
+    padding: 40px 0 65px;
+  }
+
+  .dashboard-container {
+    padding: 0 25px;
+  }
+}

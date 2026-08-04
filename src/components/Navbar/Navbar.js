@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react";
-import {
-  FiSearch,
-  FiShoppingCart,
-  FiMenu,
-  FiX,
-} from "react-icons/fi";
+import { Link, useLocation } from "react-router-dom";
+import { FiSearch, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 
 import "./Navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation();
+  const isDashboardPage = location.pathname.startsWith("/dashboard");
+  const homeUrl = process.env.PUBLIC_URL || "";
   const links = [
-    "Home",
-    "Shop",
-    "Collection",
-    "Customize",
-    "Dashboard",
+    {
+      label: "Home",
+      href: `${homeUrl}/#home`,
+    },
+    {
+      label: "Shop",
+      href: `${homeUrl}/#shop`,
+    },
+    {
+      label: "Collection",
+      href: `${homeUrl}/#collection`,
+    },
+    {
+      label: "Customize",
+      href: `${homeUrl}/#customize`,
+    },
   ];
 
   function handleMenuClick() {
@@ -44,26 +53,24 @@ function Navbar() {
   }, []);
 
   return (
-    <header className="navbar-wrapper">
+    <header
+      className={`navbar-wrapper ${isDashboardPage ? "dashboard-navbar" : ""}`}
+    >
       <div className="container-fluid navbar-container">
-        <a className="navbar-logo" href="#home">
+        <Link className="navbar-logo" to="/" onClick={handleLinkClick}>
           StepUp
-        </a>
+        </Link>
 
-        <nav
-          className={`navbar-links ${
-            isMenuOpen ? "show-menu" : ""
-          }`}
-        >
+        <nav className={`navbar-links ${isMenuOpen ? "show-menu" : ""}`}>
           {links.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              onClick={handleLinkClick}
-            >
-              {link}
+            <a key={link.label} href={link.href} onClick={handleLinkClick}>
+              {link.label}
             </a>
           ))}
+
+          <Link to="/dashboard" onClick={handleLinkClick}>
+            Dashboard
+          </Link>
         </nav>
 
         <div className="navbar-icons">
@@ -75,11 +82,7 @@ function Navbar() {
             <FiShoppingCart />
           </button>
 
-          <button
-            type="button"
-            className="menu-icon"
-            onClick={handleMenuClick}
-          >
+          <button type="button" className="menu-icon" onClick={handleMenuClick}>
             {isMenuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
@@ -87,5 +90,4 @@ function Navbar() {
     </header>
   );
 }
-
 export default Navbar;

@@ -86,7 +86,7 @@ function TrendingProducts() {
                 Products
               </h2>
 
-              <p>
+              <p style={{ color: "rgba(0, 0, 0, 0.75)" }}>
                 Lorem Ipsum Dolor Sit Amet,
                 <br />
                 Consectetur Adipiscing Elit,
